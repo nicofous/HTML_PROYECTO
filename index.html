@@ -3,11 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="keywords" content="Nicolás,Programación,Silicon">
+	<meta name="description" content="En esta página voy a estar subiendo mis primeros pasos como programador">
+	<meta name="author" content="Nicolás Antúnes">
+	<meta name="robots" content="index">
+    <title>Mi pagina web</title>
+	<link rel="icon" href="recursos/capybara.ico">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <script src="https://kit.fontawesome.com/1175ce165c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> 
-    Facilis ullam laboriosam maiores, deleniti quidem at eligendi expedita nostrum, <br>
-    nihil porro voluptatem esse sed, aliquam dolores quos labore ea minima? Sit.</p>
+     <div class="container">
+        <header class="header">
+            <div class="menu">
+            <img id="menulogo" src="recursos/logo2.png">
+                <nav>	
+                    <ul>
+                    <li><a href="index.html">Menu1</a></li>
+                    <li><a href="lists.html">Menu2</a></li>
+                    <li><a href="forms.html">Menu3</a></li>
+                    <li><a href="multimedia.html">Menu4</a></li>
+                    <li><a href="tablas.html">Menu5</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="mainpage">
+            <h1>Antunes Nicolás</h1>
+            <h2>Esta es mi primera página web, esperemos que la primera de muchas</h2>
+            <button onclick="location.href='#anclab'">EMPECEMOS</button>
+        </section>
+        <section class="secondpage" id="anclab">
+            <div class="aqueme"><h2>En que ocupo mi tiempo</h2></div>
+            <div class="actividades">
+                <div>
+                    <h3><i class="fa-solid fa-briefcase fa-lg" style="color: #1C4254;"></i>Trabajo</h3>
+                    <img src="Recursos/trabajo.jpg" alt="Trabajo">
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-laptop fa-lg" style="color: #1C4254;"></i>Programo</h3>
+                    <img src="Recursos/programo.jpg" alt="Trabajo">
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-football fa-lg" style="color: #1C4254;"></i>Rugby</h3>
+                    <img src="Recursos/RUGBY.jpg" alt="Rugby">
+                </div>
+                <div>
+                    <h3><i class="fa-solid fa-medal fa-lg" style="color: #1C4254;"></i>BJJ</h3>
+                    <img src="Recursos/BJJ.jpg" alt="BJJ">
+                </div>
+            </div>
+        </section>
+        <section class="thirdpage">
+            <img src="Recursos/HTMLCSS.png" alt="Logo HTML5 & CSS">
+            <div class="textopag3">
+                <h2>¿Como realicé esta página?</h2>
+                <p>Para realizar esta pagina web hice uso de dos lenguajes aprendidos en el Bootcamp Full Stack dictado por el profesor Marcos: <b>HTML5 Y CSS3.</b><br> HTML5 es la última versión del lenguaje de marcado <b>HTML</b> (HyperText Markup Language). Se lanzó en 2014 y es el estándar actual para la creación de páginas web. <b>CSS3</b>, en cambio, es la última versión del lenguaje de hojas de estilo <b>CSS</b>(Cascading Style Sheets), y se utiliza para definir el diseño de las mismas.</p>
+            </div>
+        </section>
+        <section class="fourthpage">
+                <div class="titulo4">
+                    <h2>Titulo formularios</h2>
+                </div>
+                <div class="contenido4">
+                    <div class="forms">
+                        <form action="https://formspree.io/f/mpzgbgrz" method="POST">
+                            <label>
+                                Nombre:
+                                <input type="text" name="Nombre" required>
+                            </label><br>
+                            <label>
+                                Apellido:
+                                <input type="text" name="Apellido" required>
+                            </label><br>
+                            <label>
+                                Email:
+                                <input type="email" name="email" required>
+                            </label><br>
+                            <button type="submit">Enviar</button><br>
+                        </form>
+                    </div>
+                    <div class="side">
+                        <h3>
+                            Contacto
+                        </h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur numquam asperiores impedit earum odio hic at tempora? Veritatis quis vitae ipsam, distinctio cum non assumenda quas iusto totam dolores illo. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        </p>
+                        <h3>
+                            Mas información
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium corrupti laboriosam! Molestiae sequi sunt temporibus repellendus exercitationem cupiditate labore voluptas? Quisquam quos aliquid alias illo ipsum repellendus? Laborum, quas!. Lorem ipsum dolor
+                        </p>
+                    </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="msj">
+                <h4 style="color: white;"><b>Made with love by Nicoan</b></h4>
+            </div>
+            <div class="redes">
+                <a href="https://www.facebook.com/nicolas.antunes.522" target="_BLANK"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://www.instagram.com/_.nicoan/" target="_BLANK"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+                <a href="https://www.instagram.com/_.nicoan/" target="_BLANK"><i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i></a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
