@@ -126,6 +126,7 @@
         flex-direction: row;
         place-content: left;
         place-items: center;
+        flex-wrap: wrap-reverse;
         background-color: #0A2E36;
         width: 100vw;
         height: 100vh;
@@ -539,6 +540,10 @@
      .redes a:visited{
           text-decoration: none;
           color: white;
+     }
+
+     footer span{
+          color: gold;
      }
 
      /* Modo noche */
