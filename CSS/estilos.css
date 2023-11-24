@@ -24,6 +24,7 @@
         top: 0;
         width: 100vw;
         height: 10vh;
+        z-index: 1;
    }
 
    #menulogo{
@@ -69,41 +70,101 @@
 	    flex-grow: 15;
 }
 
-   /* section */
+/* Boton switch modo noche */
 
-    section {
-        background-color: grey;
-    }
+.darkModeSwitch{
+     background: #0A2E36;
+     display:flex;
+     position: relative;
+     cursor: pointer;
+     outline: none;
+     border: none;
+     border-radius: 1rem;
+     align-items: center;
+     justify-content: space-between;
+     height: 30px;
+     padding-top:-30px ;
+     transition: all .7s ease;
+ }
+ .darkModeSwitch span{
+     width:30px;
+     height:15px;
+     line-height:10px;
+     display:block;
+     color:#fff;
+ 
+     background: none;
+ }
+ .darkModeSwitch::after{
+     display:block;
+     background: #121212;
+     width: 1.9rem;
+     height: 1.9rem;
+     position: absolute;
+     top:0;
+     left:0;
+     right:unset;
+     border-radius: 3rem;
+     transition: all .7s ease;
+ 
+     content: "";
+ }
+ .darkModeSwitch.active{
+   background: gold;
+   transition: all .7s ease;
+ }
+ .darkModeSwitch.active::after{
+   left:unset;
+   right:0;
+   transition: all .7s ease;
+ }
+
+/* PAGINA PRINCIPAL */
 
     .mainpage{
         display: flex;
-        flex-direction: column;
-        place-content: center;
+        flex-direction: row;
+        place-content: left;
         place-items: center;
         background-color: #0A2E36;
         width: 100vw;
-        height: 87vh;
+        height: 100vh;
     }
+
+    .mainpage .saludo{
+     padding-left: 15%;
+     padding-right: 10%;
+    }
+
+    .mainpage .yo img{
+          margin-top: 10vh;
+          height: 50vh;
+          width: auto;
+          border-radius: 50%;
+    }
+
     .mainpage h1{
-        margin-top: 10%;
+        margin-top: 5%;
         font-size: 300%;
         padding: 3%;
-        padding-left: 15%;
-        padding-right: 15%;
-        text-align: center;
+        padding-left: 0%;
+        padding-right: 10%;
+        margin-bottom: -1%;
+        text-align: left;
         color: white;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-weight: 200;
-        border: 4px solid white;
+        /* border: 4px solid white; */
         border-radius: 5px;
         height: auto;
+        justify-self: start;
     }
 
     .mainpage h2 {
           font-size: 150% ;
           font-weight: 100;
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          padding-bottom: 2%;
+          padding-bottom: 4%;
           color: lightgray;
           height: auto;
     }
@@ -120,12 +181,24 @@
           color: #0A2E36;
     }
 
+    .mainpage button a {
+          color: #0A2E36;
+          text-decoration: none;
+    }
+
+    .mainpage span {
+     align-self: self-end;
+     padding-bottom: 30px ;
+    }
+
+    /* SEGUNDA PAGINA */
+
     .secondpage {
           display: flex;
         flex-direction: column;
         place-content: center;
         place-items: center;
-        background-color: white;
+        background-color: inherit;
         margin-bottom: 5%;
     }
         
@@ -162,10 +235,77 @@
     .secondpage img{
           width: 20vw;
           height: 20vw;
-          border-radius: 50%;
     }
 
-    .thirdpage {
+     /* Pagina 3 nueva */
+
+     .thirdpage {
+          background-color: #0A2E36;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          display: flex;
+          flex-direction: column;
+          padding: 2%;
+          padding-right: 4%;
+          place-content: center;
+          justify-content: center;
+     }
+     .contenedor-carta{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 0px;
+     }
+     .carta{
+          width: 325px;
+          background-color: #666;
+          border-radius: 8px;
+          overflow: hidden;
+          margin: 20px;
+          transition: 0.2s;
+     }
+     .carta:hover{
+          box-shadow: 0px 0px 30px rgb(180, 179, 179);
+          transform: scale(1.1);
+     }
+     .carta img{
+          width: 100%;
+          height: auto;
+     }
+     .contenido-carta{
+          padding: 16px;
+     }
+     .thirdpage h2{
+          color: white;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+          text-align: center;
+          font-size: 2rem;
+    }
+     .contenido-carta h3{
+          font-size: 28px;
+          margin-bottom: 8px;
+          color: white;
+     }
+     .contenido-carta p{
+          color: #fff;
+          font-size: 15px;
+          line-height: 1.3;
+     }
+     .contenido-carta a{
+          display: inline-block;
+          padding: 8px 16px;
+          background-color: #333;
+          text-decoration: none;
+          border-radius: 4px;
+          margin-top: 16px;
+          color: #fff;
+     }
+
+
+
+
+     /*Pagina 3 */
+
+    /* .thirdpage {
           display: flex;
           flex-direction: row;
           background-color: #0A2E36;
@@ -193,14 +333,16 @@
     .thirdpage p{
           color: lightgray;
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+    } */
+
+    /* Pagina 4 */
 
     .fourthpage {
           display: flex; 
           flex-direction: row;
           display: block;
           padding-bottom: 2%;
-          background-color: white;
+          background-color: inherit;
    }
 
    .fourthpage h2{
@@ -294,7 +436,7 @@
                border-radius: 50%;
          }
 
-         .thirdpage {
+         /* .thirdpage {
                display: flex;
                flex-direction: column;
                background-color: #0A2E36;
@@ -306,7 +448,7 @@
           .thirdpage img{
                margin-top: 1%;
                margin-left: 10%;
-         }
+         } */
 
          .fourthpage .contenido4 {
                display: flex;
@@ -397,4 +539,18 @@
      .redes a:visited{
           text-decoration: none;
           color: white;
+     }
+
+     /* Modo noche */
+
+     .dark {
+          background-color: #121212;;
+      }
+
+     .dark h2, .dark h3, .dark p, .dark a, .dark ul li a, .dark label {
+          color: white;
+     }
+
+     .dark nav ul li a::before {
+          background: white;
      }
